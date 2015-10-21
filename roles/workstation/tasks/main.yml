@@ -1,0 +1,50 @@
+---
+- name: Install all packages
+  include: packages.yml
+  tags:
+    - packages
+
+- name: Manage all services
+  include: services.yml
+  tags:
+    - services
+
+- name: Configure bash
+  include: git.yml
+  tags:
+    - git
+  sudo: yes
+  sudo_user: navid
+
+- name: Clone the dotfiles repo
+  git: repo=http://github.com/navidpaya/dotfiles dest=~/.dotfiles
+  sudo: yes
+  sudo_user: navid
+
+- name: Configure bash
+  include: bash.yml
+  tags:
+    - bash
+  sudo: yes
+  sudo_user: navid
+
+- name: Configure vim
+  include: vim.yml
+  tags:
+    - vim
+  sudo: yes
+  sudo_user: navid
+
+- name: Install packer
+  include: packer.yml
+  tags:
+    - packer
+  sudo: yes
+  sudo_user: navid
+
+- name: Configure i3 et al
+  include: i3.yml
+  tags:
+    - i3
+  sudo: yes
+  sudo_user: navid

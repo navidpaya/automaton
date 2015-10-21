@@ -1,0 +1,5 @@
+---
+- name: Symlink few configuration files from the repo
+  file: src=~/.dotfiles/{{ item.src }} dest=~/{{ item.dest }} state=link force=yes
+  with_items:
+    - { src: 'Xdefaults', dest: '.Xdefaults' }

@@ -1,0 +1,30 @@
+---
+- name: Uninstall vi because it sucks
+  pacman: name={{ item }} state=absent
+  with_items:
+    - vi
+
+- name: All the packages in one go
+  pacman: name={{ item }} state=present
+  with_items:
+    - bash-completion
+    - chromium
+    - dmenu
+    - feh
+    - git
+    - gvim
+    - htop
+    - i3
+    - iftop
+    - iotop
+    - networkmanager
+    - openssh
+    - ponymix
+    - pulseaudio
+    - rsync
+    - rxvt-unicode
+    - sddm
+    - ttf-dejavu
+    - xf86-input-synaptics
+    - xf86-video-intel
+    - xorg-server

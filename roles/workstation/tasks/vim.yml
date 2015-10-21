@@ -1,0 +1,16 @@
+---
+- name: Symlink vi to vim
+  file: src=/usr/bin/vim dest=/usr/bin/vi state=link
+
+- name: Symlink few configuration files from the repo
+  file: src=~/.dotfiles/{{ item.src }} dest=~/{{ item.dest }} state=link force=yes
+  with_items:
+    - { src: 'vimrc', dest: '.vimrc' }
+
+- name: Install Vundle
+  git: repo=https://github.com/VundleVim/Vundle.vim dest=~/.vim/bundle/Vundle.vim
+
+# - name: Install vim plugins
+#   shell: 'vim +PluginInstall +qall'
+#   sudo: yes
+#   sudo_user: navid
