@@ -8,7 +8,7 @@
              dest=/tmp
              copy=no
 
-- name: Create the package
+- name: Create and install the package
   shell: makepkg -di --noconfirm
   args:
     chdir: /tmp/packer

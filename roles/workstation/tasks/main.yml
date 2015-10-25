@@ -42,6 +42,13 @@
   sudo: yes
   sudo_user: navid
 
+- name: Install aur packages
+  include: aur.yml
+  tags:
+    - aur
+  sudo: yes
+  sudo_user: navid
+
 - name: Configure i3 et al
   include: i3.yml
   tags:

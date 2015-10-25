@@ -22,6 +22,7 @@
     - openssh
     - ponymix
     - pulseaudio
+    - rox
     - rsync
     - rxvt-unicode
     - sddm
@@ -29,3 +30,4 @@
     - xf86-input-synaptics
     - xf86-video-intel
     - xorg-server
+    - xorg-xbacklight

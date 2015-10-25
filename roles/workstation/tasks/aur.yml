@@ -1,0 +1,8 @@
+---
+- name: All the AUR packages in one go
+  shell: packer -S --auronly --noconfirm --noedit {{ item }}
+  args:
+    creates: "/usr/bin/{{ item }}"
+  with_items:
+    - playerctl
+    - spotify
