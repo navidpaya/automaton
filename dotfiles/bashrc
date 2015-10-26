@@ -1,0 +1,28 @@
+export SHELL=/bin/bash
+export TERM='xterm'
+export EDITOR=vim
+
+source /usr/share/git/completion/git-prompt.sh
+export PS1='\[\e[0;32m\]\u\[\e[m\]@\[\e[0;32m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\]\[\e[0;34m\]$(__git_ps1)\[\e[m\] '
+
+# Git Aliases
+alias gs='git status'
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit'
+alias gd='git diff'
+alias gg='git grep'
+alias gl='git log --graph --decorate --oneline'
+alias gco='git checkout'
+
+alias aurupdate="packer -Syu --auronly --noconfirm --noedit"
+alias ls='ls --color=auto --group-directories-first'
+alias ll='ls -lh --color=auto'
+
+# Some magic to make ssh-agent and ssh-add play nice
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add -l | grep "The agent has no identities" && ssh-add
