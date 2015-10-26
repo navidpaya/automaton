@@ -4,3 +4,8 @@
   with_items:
     - git config --global user.name "Navid Paya"
     - git config --global user.email "me@navidpaya.com"
+
+- name: Make sure we use SSH instead of HTTPS for the automaton repo
+  shell: 'git remote set-url origin git@github.com:navidpaya/automaton'
+  args:
+    chdir: '~/.automaton'
