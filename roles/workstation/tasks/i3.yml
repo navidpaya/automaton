@@ -3,7 +3,7 @@
   file: src={{ dotfiles_location }}/{{ item.src }} dest=~/{{ item.dest }} state=link force=yes
   with_items:
     - { src: 'Xdefaults', dest: '.Xdefaults' }
-    - { src: 'i3_config', dest: '.config/i3/config' }
+    - { src: 'i3_config', dest: '.i3/config' }
 
 - name: Download a wallpaper just to spice things up
   get_url: url='http://cdn.desktopwallpapers4.me/wallpapers/photography/1920x1200/3/24261-pebbles-1920x1200-photography-wallpaper.png'
