@@ -2,5 +2,7 @@
 - name: All the services in one go
   service: name={{ item}} state=started enabled=yes
   with_items:
-    - sddm
     - NetworkManager
+    - deluge-web
+    - deluged
+    - sddm
