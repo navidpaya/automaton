@@ -22,10 +22,10 @@
     - networkmanager
     - openssh
     - parcellite
+    - pcmanfm
     - ponymix
     - pulseaudio
-    - python2-service-identity
-    - rox
+    - python2-service-identity # Dependency for deluge
     - rsync
     - rxvt-unicode
     - sddm
