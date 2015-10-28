@@ -9,6 +9,7 @@
   with_items:
     - bash-completion
     - chromium
+    - deluge
     - dmenu
     - feh
     - git
@@ -23,14 +24,14 @@
     - parcellite
     - ponymix
     - pulseaudio
+    - python2-service-identity
     - rox
     - rsync
     - rxvt-unicode
     - sddm
     - ttf-dejavu
+    - vlc
     - xf86-input-synaptics
     - xf86-video-intel
     - xorg-server
     - xorg-xbacklight
-    - deluge
-    - python2-service-identity
