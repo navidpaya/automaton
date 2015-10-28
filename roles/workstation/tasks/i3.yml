@@ -1,4 +1,7 @@
 ---
+- name: Make sure the i3 config directory exists
+  file: path=~/.i3 state=directory
+
 - name: Symlink few configuration files from the repo
   file: src={{ dotfiles_location }}/{{ item.src }} dest=~/{{ item.dest }} state=link force=yes
   with_items:
