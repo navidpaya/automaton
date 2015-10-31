@@ -11,6 +11,7 @@
     - chromium
     - deluge
     - dmenu
+    - dosfstools
     - feh
     - git
     - gvim
@@ -19,7 +20,9 @@
     - iftop
     - iotop
     - keepassx
+    - mtools
     - networkmanager
+    - ntfs-3g
     - openssh
     - parcellite
     - pcmanfm
