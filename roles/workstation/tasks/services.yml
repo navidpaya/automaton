@@ -5,4 +5,5 @@
     - NetworkManager
     - deluge-web
     - deluged
+    - docker
     - sddm
