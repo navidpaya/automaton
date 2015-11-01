@@ -2,7 +2,7 @@
 - name: Configure git user and email
   shell: '{{ item }}'
   with_items:
-    - git config --global user.name '{{ git_user }}'
+    - git config --global user.name '{{ git_name }}'
     - git config --global user.email '{{ git_email }}'
 
 - name: Make sure we use SSH instead of HTTPS for the automaton repo

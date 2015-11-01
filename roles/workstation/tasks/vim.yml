@@ -3,7 +3,7 @@
   file: src=/usr/bin/vim dest=/usr/bin/vi state=link
 
 - name: Symlink few configuration files from the repo
-  file: src={{ dotfiles_location }}/{{ item.src }} dest=~/{{ item.dest }} state=link force=yes
+  file: src={{ dotfiles }}/{{ item.src }} dest=~/{{ item.dest }} state=link force=yes
   with_items:
     - { src: 'vimrc', dest: '.vimrc' }
 

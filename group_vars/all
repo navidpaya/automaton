@@ -1,4 +1,5 @@
-git_user: 'Navid Paya'
+user:      navid
+git_name:  'Navid Paya'
 git_email: 'me@navidpaya.com'
-automaton_location: ~/.automaton
-dotfiles_location: '{{ automaton_location }}/dotfiles'
+dotfiles:  .automaton/dotfiles
+

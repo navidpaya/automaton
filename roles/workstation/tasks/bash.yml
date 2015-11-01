@@ -1,6 +1,6 @@
 ---
 - name: Symlink few configuration files from the repo
-  file: src={{ dotfiles_location }}/{{ item.src }} dest=~/{{ item.dest }} state=link force=yes
+  file: src={{ dotfiles }}/{{ item.src }} dest=~/{{ item.dest }} state=link force=yes
   with_items:
     - { src: 'bash_profile', dest: '.bash_profile' }
     - { src: 'bashrc', dest: '.bashrc' }

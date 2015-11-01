@@ -3,7 +3,7 @@
   file: path=~/.i3 state=directory
 
 - name: Symlink few configuration files from the repo
-  file: src={{ dotfiles_location }}/{{ item.src }} dest=~/{{ item.dest }} state=link force=yes
+  file: src={{ dotfiles }}/{{ item.src }} dest=~/{{ item.dest }} state=link force=yes
   with_items:
     - { src: 'Xdefaults', dest: '.Xdefaults' }
     - { src: 'i3_config', dest: '.i3/config' }
