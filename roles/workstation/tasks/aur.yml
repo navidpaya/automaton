@@ -6,3 +6,8 @@
   with_items:
     - playerctl
     - spotify
+
+- name: Install keepassx
+  shell: packer -S --auronly --noconfirm --noedit keepassx-git
+  args:
+    creates: "/usr/bin/keepassx
