@@ -20,8 +20,8 @@
     - i3
     - iftop
     - iotop
-    - keepassx
     - mtools
+    - net-tools # For Virtualbox networking
     - networkmanager
     - ntfs-3g
     - openssh
@@ -34,6 +34,9 @@
     - rxvt-unicode
     - sddm
     - ttf-dejavu
+    - vagrant
+    - virtualbox
+    - virtualbox-host-dkms
     - vlc
     - xf86-input-synaptics
     - xf86-video-intel
