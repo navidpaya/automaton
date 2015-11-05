@@ -1,0 +1,12 @@
+---
+- name: Load the Virtualbox kernel modules
+  modprobe: name={{ item }}
+  with_items:
+    - vboxdrv
+    - vboxnetadp
+    - vboxnetflt
+    - vboxpci
+
+- name: Load the Virtualbox kernel modules at boot
+  copy: src=virtualbox.conf
+        dest=/etc/modprobe.d/virtualbox.conf

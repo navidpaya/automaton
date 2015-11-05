@@ -55,3 +55,8 @@
     - i3
   sudo: yes
   sudo_user: navid
+
+- name: Install kernel modules for Virtualbox
+  include: virtualbox.yml
+  tags:
+    - virtualbox
