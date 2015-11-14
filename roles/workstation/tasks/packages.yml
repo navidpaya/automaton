@@ -20,6 +20,7 @@
     - i3
     - iftop
     - iotop
+    - libreoffice-still
     - mtools
     - net-tools # For Virtualbox networking
     - networkmanager
