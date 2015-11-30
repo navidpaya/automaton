@@ -26,6 +26,7 @@
     - networkmanager
     - ntfs-3g
     - openssh
+    - openvpn
     - parcellite
     - pcmanfm
     - ponymix
@@ -34,11 +35,13 @@
     - rsync
     - rxvt-unicode
     - sddm
+    - sshpass
     - ttf-dejavu
     - vagrant
     - virtualbox
     - virtualbox-host-dkms
     - vlc
+    - whois
     - xf86-input-synaptics
     - xf86-video-intel
     - xorg-server
