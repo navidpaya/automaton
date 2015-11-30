@@ -76,3 +76,6 @@ set number
 " No more committing swp files to git
 set backupdir=/tmp
 set directory=/tmp
+
+" Save and run
+map <leader>r :w<CR>: !clear && ./%<CR>
