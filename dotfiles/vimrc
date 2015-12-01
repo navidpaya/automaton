@@ -2,80 +2,59 @@ set shell=bash
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
+
 call vundle#begin()
-
 Plugin 'gmarik/Vundle.vim'
-
 Plugin 'kien/ctrlp.vim'
-
 Plugin 'Lokaltog/vim-easymotion'
-
 Plugin 'scrooloose/nerdtree'
-map <C-n> :NERDTreeToggle<CR>
-
+map <C-n> :NERDTreeToggle <CR>
 Plugin 'tpope/vim-fugitive'
-
 Plugin 'mileszs/ack.vim'
-
 Plugin 'bling/vim-airline'
 set laststatus=2
-
 Plugin 'Shougo/neocomplcache.vim'
 let g:neocomplcache_enable_at_startup = 1
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
 Plugin 'sjl/gundo.vim'
 nnoremap <leader>u :GundoToggle<CR>
-
-Plugin 'vim-ruby/vim-ruby'
-
-Plugin 'tpope/vim-endwise'
-
-Plugin 'chase/vim-ansible-yaml'
-
-Plugin 'fatih/vim-go'
-
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
+Plugin 'chase/vim-ansible-yaml'
+Plugin 'fatih/vim-go'
+let python_highlight_all = 1
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-perl/vim-perl'
 map <Leader>c gc
-
 Plugin 'altercation/vim-colors-solarized'
-
 call vundle#end() 
-
 
 " Syntax and File Types
 filetype plugin indent on
 syntax enable
-
 " Color Scheme and Terminal Optimizations
 set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
-
 " Toggle showing line number
-map <Leader>n :set number!<CR>
-
+map <Leader>n :set number! <CR>
 " No Tabs. Only 4 Spaces.
 set expandtab
 set tabstop=4 shiftwidth=4 softtabstop=4
 set autoindent
 set wildmenu
-
 " Search Optimizations
 set incsearch
 set hlsearch
 set cursorline
 set cursorcolumn
 hi CursorLine cterm=bold ctermbg=0
-
 " Line Numbering, relative and and absolute at the same time. Cool.
 set relativenumber 
 set number
-
 " No more committing swp files to git
 set backupdir=/tmp
 set directory=/tmp
-
 " Save and run
 map <leader>r :w<CR>: !clear && ./%<CR>
