@@ -32,29 +32,40 @@ call vundle#end()
 " Syntax and File Types
 filetype plugin indent on
 syntax enable
-" Color Scheme and Terminal Optimizations
+
+" The fine appeal
 set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
-" Toggle showing line number
-map <Leader>n :set number! <CR>
-" No Tabs. Only 4 Spaces.
+
+" Tabs are evil
 set expandtab
 set tabstop=4 shiftwidth=4 softtabstop=4
 set autoindent
 set wildmenu
+
 " Search Optimizations
 set incsearch
 set hlsearch
 set cursorline
 set cursorcolumn
 hi CursorLine cterm=bold ctermbg=0
-" Line Numbering, relative and and absolute at the same time. Cool.
+
+" Line numbering
 set relativenumber 
 set number
+
+function! NumberToggle()
+  setl rnu!
+  setl nu!
+endfunc
+
+nnoremap <Leader>n :call NumberToggle() <CR>
+
 " No more committing swp files to git
 set backupdir=/tmp
 set directory=/tmp
+
 " Save and run
 map <leader>r :w<CR>: !clear && ./%<CR>
