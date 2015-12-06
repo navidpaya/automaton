@@ -37,6 +37,7 @@
     - sddm
     - sshpass
     - ttf-dejavu
+    - ttf-liberation
     - vagrant
     - virtualbox
     - virtualbox-host-dkms
