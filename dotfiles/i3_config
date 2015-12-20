@@ -144,6 +144,9 @@ bindsym XF86AudioPrev exec playerctl previous
 # Lock Screen
 bindsym Control+Mod1+l exec i3-msg workspace 1 && i3lock -c 111111 -d
 
+# Print Screen
+bindsym Print exec "scrot ~/Desktop/screenshot-%Y%m%d-%H:%M:%S.png"
+
 # The one and only clipboard manager
 exec --no-startup-id parcellite
 

@@ -22,6 +22,7 @@
     - iotop
     - libreoffice-still
     - mtools
+    - mtr
     - net-tools # For Virtualbox networking
     - networkmanager
     - ntfs-3g
@@ -34,6 +35,7 @@
     - python2-service-identity # Dependency for deluge
     - rsync
     - rxvt-unicode
+    - scrot
     - sddm
     - sshpass
     - ttf-dejavu
