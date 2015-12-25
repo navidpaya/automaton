@@ -3,8 +3,7 @@
   service: name={{ item}} state=started enabled=yes
   with_items:
     - NetworkManager
-    - deluge-web
-    - deluged
     - dkms
     - docker
     - sddm
+    - transmission

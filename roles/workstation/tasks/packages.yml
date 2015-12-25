@@ -9,7 +9,6 @@
   with_items:
     - bash-completion
     - chromium
-    - deluge
     - dmenu
     - docker
     - dosfstools
@@ -38,6 +37,7 @@
     - scrot
     - sddm
     - sshpass
+    - transmission-cli
     - ttf-dejavu
     - ttf-liberation
     - vagrant
