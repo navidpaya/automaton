@@ -31,7 +31,6 @@
     - pcmanfm
     - ponymix
     - pulseaudio
-    - python2-service-identity # Dependency for deluge
     - rsync
     - rxvt-unicode
     - scrot
@@ -49,3 +48,5 @@
     - xf86-video-intel
     - xorg-server
     - xorg-xbacklight
+    - zathura
+    - zathura-pdf-poppler
