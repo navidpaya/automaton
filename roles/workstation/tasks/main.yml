@@ -14,7 +14,7 @@
   tags:
     - users
 
-- name: Configure bash
+- name: Configure git
   include: git.yml
   tags:
     - git
@@ -32,6 +32,13 @@
   include: vim.yml
   tags:
     - vim
+  sudo: yes
+  sudo_user: navid
+
+- name: Configure ssh
+  include: ssh.yml
+  tags:
+    - ssh
   sudo: yes
   sudo_user: navid
 
