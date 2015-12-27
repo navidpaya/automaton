@@ -24,6 +24,7 @@
     - mtr
     - net-tools # For Virtualbox networking
     - networkmanager
+    - nmap
     - ntfs-3g
     - openssh
     - openvpn
