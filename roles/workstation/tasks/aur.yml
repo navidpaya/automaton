@@ -1,13 +1,15 @@
 ---
-- name: All the AUR packages in one go
-  shell: packer -S --auronly --noconfirm --noedit {{ item }}
-  args:
-    creates: "/usr/bin/{{ item }}"
+- name: Check if AUR packages are installed
+  shell: pacman -Qq {{ item }}
   with_items:
+    - keepassx-git
     - playerctl
+    - plex-media-server
     - spotify
-
-- name: Install keepassx
-  shell: packer -S --auronly --noconfirm --noedit keepassx-git
-  args:
-    creates: "/usr/bin/keepassx"
+  register: aur_packages
+  ignore_errors: True
+  
+- name: Make sure all AUR packages are installed
+  shell: packer -S --auronly --noconfirm --noedit {{ item }}
+  when: item.rc != 0
+  with_items: "{{ aur_packages.results }}"
