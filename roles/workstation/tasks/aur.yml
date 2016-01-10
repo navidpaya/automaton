@@ -6,6 +6,7 @@
     - playerctl
     - plex-media-server
     - spotify
+    - sunflower
   register: aur_packages
   ignore_errors: True
   
