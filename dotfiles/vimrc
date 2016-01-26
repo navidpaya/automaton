@@ -4,30 +4,42 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
 
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'scrooloose/nerdtree'
-map <C-n> :NERDTreeToggle <CR>
-Plugin 'tpope/vim-fugitive'
-Plugin 'mileszs/ack.vim'
-Plugin 'bling/vim-airline'
-set laststatus=2
 Plugin 'Shougo/neocomplcache.vim'
-let g:neocomplcache_enable_at_startup = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-Plugin 'sjl/gundo.vim'
-nnoremap <leader>u :GundoToggle<CR>
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-endwise'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'fatih/vim-go'
-let python_highlight_all = 1
-Plugin 'vim-ruby/vim-ruby'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'sjl/gundo.vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
 Plugin 'vim-perl/vim-perl'
-map <Leader>c gc
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-ruby/vim-ruby'
 call vundle#end() 
+
+" Make neocomplcache play nicer
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+let g:neocomplcache_enable_at_startup = 1
+
+" Make Python syntax completion awesome
+let python_highlight_all = 1
+
+" What would I do witout nerdtree?
+map <C-n> :NERDTreeToggle <CR>
+
+" Toggle comments
+map <Leader>c gc
+
+" The magical undo
+nnoremap <leader>u :GundoToggle<CR>
+
+" Make vim-airline always show up
+set laststatus=2
 
 " Syntax and File Types
 filetype plugin indent on
