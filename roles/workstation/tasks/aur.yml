@@ -7,6 +7,7 @@
     - plex-media-server
     - spotify
     - sunflower
+    - docker-machine-bin
   register: aur_packages
   ignore_errors: True
   

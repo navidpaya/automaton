@@ -11,6 +11,7 @@
     - chromium
     - dmenu
     - docker
+    - docker-compose
     - dosfstools
     - feh
     - git
@@ -37,6 +38,7 @@
     - scrot
     - sddm
     - sshpass
+    - the_silver_searcher
     - transmission-cli
     - ttf-dejavu
     - ttf-liberation
