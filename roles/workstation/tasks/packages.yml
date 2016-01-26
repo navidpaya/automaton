@@ -42,6 +42,7 @@
     - transmission-cli
     - ttf-dejavu
     - ttf-liberation
+    - unzip
     - vagrant
     - virtualbox
     - virtualbox-host-dkms
