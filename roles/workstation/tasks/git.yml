@@ -6,6 +6,6 @@
     - git config --global user.email '{{ git_email }}'
 
 - name: Make sure we use SSH instead of HTTPS for the automaton repo
-  shell: 'git remote set-url origin git@github.com:navidpaya/automaton'
-  args:
-    chdir: '~/.automaton'
+  git: repo=git@github.com:navidpaya/automaton
+       dest=~/.automaton
+       update=no
