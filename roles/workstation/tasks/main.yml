@@ -18,50 +18,57 @@
   include: git.yml
   tags:
     - git
-  sudo: yes
-  sudo_user: navid
+  become: yes
+  become_user: navid
+  become_method: sudo
 
 - name: Configure bash
   include: bash.yml
   tags:
     - bash
-  sudo: yes
-  sudo_user: navid
+  become: yes
+  become_user: navid
+  become_method: sudo
 
 - name: Configure vim
   include: vim.yml
   tags:
     - vim
-  sudo: yes
-  sudo_user: navid
+  become: yes
+  become_user: navid
+  become_method: sudo
 
 - name: Configure ssh
   include: ssh.yml
   tags:
     - ssh
-  sudo: yes
-  sudo_user: navid
+  become: yes
+  become_user: navid
+  become_method: sudo
 
 - name: Install packer
   include: packer.yml
   tags:
     - packer
-  sudo: yes
-  sudo_user: navid
+  become: yes
+  become_user: navid
+  become_method: sudo
 
 - name: Install aur packages
   include: aur.yml
   tags:
     - aur
-  sudo: yes
-  sudo_user: navid
+  become: yes
+  become_user: navid
+  become_method: sudo
 
 - name: Configure i3 et al
   include: i3.yml
   tags:
     - i3
-  sudo: yes
-  sudo_user: navid
+  become: yes
+  become_user: navid
+  become_method: sudo
 
 - name: Install kernel modules for Virtualbox
   include: virtualbox.yml
