@@ -9,12 +9,15 @@
   with_items:
     - bash-completion
     - chromium
+    - cups
     - dmenu
     - docker
     - docker-compose
     - dosfstools
     - feh
+    - ghostscript
     - git
+    - gsfonts
     - gvim
     - htop
     - i3

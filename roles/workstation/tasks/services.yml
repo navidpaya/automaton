@@ -3,8 +3,10 @@
   service: name={{ item}} state=started enabled=yes
   with_items:
     - NetworkManager
+    - cups-browsed.service
     - dkms
     - docker
+    - org.cups.cupsd.service
     - plexmediaserver
     - sddm
     - transmission
