@@ -16,6 +16,7 @@
     - dosfstools
     - feh
     - ghostscript
+    - gimp
     - git
     - gsfonts
     - gvim
@@ -56,5 +57,6 @@
     - xf86-video-intel
     - xorg-server
     - xorg-xbacklight
+    - xsane
     - zathura
     - zathura-pdf-poppler
