@@ -27,8 +27,10 @@
     - iotop
     - keepassx2
     - libreoffice-still
+    - linux-headers
     - mtools
     - mtr
+    - nautilus
     - net-tools # For Virtualbox networking
     - networkmanager
     - nmap
