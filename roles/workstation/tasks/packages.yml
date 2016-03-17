@@ -46,6 +46,7 @@
     - scrot
     - sddm
     - sshpass
+    - tcpdump
     - the_silver_searcher
     - transmission-cli
     - ttf-dejavu
@@ -56,6 +57,7 @@
     - virtualbox-host-dkms
     - vlc
     - whois
+    - wireshark-gtk
     - xf86-input-synaptics
     - xf86-video-intel
     - xorg-server
