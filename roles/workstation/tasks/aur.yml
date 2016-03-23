@@ -3,7 +3,6 @@
   shell: pacman -Qq {{ item }}
   with_items:
     - playerctl
-    - plex-media-server
     - spotify
     - docker-machine-bin
   register: aur_packages
