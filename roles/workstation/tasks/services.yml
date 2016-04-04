@@ -6,5 +6,4 @@
     - cups-browsed.service
     - docker
     - org.cups.cupsd.service
-    - plexmediaserver
     - sddm
