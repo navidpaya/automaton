@@ -48,7 +48,7 @@
     - sshpass
     - tcpdump
     - the_silver_searcher
-    - transmission-cli
+    - transmission-gtk
     - ttf-dejavu
     - ttf-liberation
     - unzip
