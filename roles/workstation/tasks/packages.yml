@@ -25,6 +25,7 @@
     - i3
     - iftop
     - iotop
+    - ipython
     - keepassx2
     - libreoffice-still
     - linux-headers
