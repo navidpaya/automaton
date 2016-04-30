@@ -9,6 +9,7 @@
   with_items:
     - bash-completion
     - chromium
+    - cowsay
     - cups
     - dmenu
     - docker
@@ -16,6 +17,7 @@
     - dosfstools
     - evince
     - feh
+    - fortune-mod
     - ghostscript
     - gimp
     - git
