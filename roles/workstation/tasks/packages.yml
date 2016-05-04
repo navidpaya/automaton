@@ -45,6 +45,8 @@
     - pcmanfm
     - ponymix
     - pulseaudio
+    - python-virtualenv
+    - python2-virtualenv
     - rsync
     - rxvt-unicode
     - scrot
