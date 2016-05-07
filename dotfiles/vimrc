@@ -98,3 +98,8 @@ set directory=/tmp
 
 " Save and run
 map <leader>r :w<CR>: !clear && ./%<CR>
+
+" Save ,quit, or not
+map <leader>w :wa<CR>
+map <leader>x :xa<CR>
+map <leader>q :qa!<CR>
