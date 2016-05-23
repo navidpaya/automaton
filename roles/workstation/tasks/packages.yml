@@ -52,6 +52,7 @@
     - scrot
     - sddm
     - sshpass
+    - sysdig
     - tcpdump
     - the_silver_searcher
     - transmission-gtk
