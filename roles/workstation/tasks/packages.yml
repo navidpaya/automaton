@@ -8,6 +8,7 @@
   pacman: name={{ item }} state=present
   with_items:
     - bash-completion
+    - bind-tools
     - chromium
     - cowsay
     - cups
@@ -15,6 +16,8 @@
     - docker
     - docker-compose
     - dosfstools
+    - eog
+    - eog-plugins
     - evince
     - feh
     - fortune-mod
@@ -26,9 +29,11 @@
     - htop
     - i3
     - iftop
+    - intellij-idea-community-edition
     - iotop
     - ipython
     - ipython2
+    - jdk8-openjdk
     - keepassx2
     - libreoffice-still
     - linux-headers
@@ -52,6 +57,7 @@
     - scrot
     - sddm
     - sshpass
+    - sushi
     - sysdig
     - tcpdump
     - the_silver_searcher

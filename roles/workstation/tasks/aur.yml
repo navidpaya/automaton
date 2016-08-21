@@ -2,9 +2,11 @@
 - name: Check if AUR packages are installed
   shell: pacman -Qq {{ item }}
   with_items:
+    - docker-machine-bin
+    - insync
+    - insync-nautilus
     - playerctl
     - spotify
-    - docker-machine-bin
   register: aur_packages
   ignore_errors: True
   
