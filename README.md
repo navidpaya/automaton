@@ -1,4 +1,4 @@
-This is how I manage my Lenovo T430s with ArchLinux on it. The idea is to get get it to a stage where Ansible can take over and manage the rest. This setup gives me a fully-encrypted disk with LVM on top of that, with Gnome and a bunch of other packages for my daily needs.
+This is how I manage my Lenovo T430s with ArchLinux on it. The idea is to get it to a stage where Ansible can take over and manage the rest. This setup gives me a fully-encrypted disk with LVM on top of that, with Gnome and a bunch of other packages for my daily needs.
 
 ### Partitioning the disk
 Use cfdisk or fdisk. We’ll create a /boot which won’t be encrypted and an LVM volume that will be fully encrypted and hold everything else.
