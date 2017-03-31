@@ -1,8 +1,7 @@
 This is how I manage my Lenovo T430s with ArchLinux on it. The idea is to get get it to a stage where Ansible can take over and manage the rest. This setup gives me a fully-encrypted disk with LVM on top of that, with Gnome and a bunch of other packages for my daily needs.
 
-### Partitioning the disk (cfdisk or fdisk)
-### We’ll create a /boot which won’t be encrypted
-### and an LVM volume that will be fully encrypted and hold everything else.
+### Partitioning the disk
+Use cfdisk or fdisk. We’ll create a /boot which won’t be encrypted and an LVM volume that will be fully encrypted and hold everything else.
     /dev/sda1 > 83 (Linux) for /boot
     /dev/sda2 > 8e (LVM) for lvm
 
@@ -66,9 +65,8 @@ This is how I manage my Lenovo T430s with ArchLinux on it. The idea is to get ge
     passwd
 
 ### Install and configure grub
-    pacman -S grub os-prober
     vi /etc/default/grub
-    GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda4:MyStorage root=/dev/mapper/MyStorage-root_vol"
+    GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda2:MyStorage root=/dev/mapper/MyStorage-root_vol"
     grub-install --target=i386-pc --recheck --debug /dev/sda
     grub-mkconfig -o /boot/grub/grub.cfg
 
