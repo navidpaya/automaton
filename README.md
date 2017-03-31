@@ -2,6 +2,7 @@ This is how I manage my Lenovo T430s with ArchLinux on it. The idea is to get ge
 
 ### Partitioning the disk
 Use cfdisk or fdisk. We’ll create a /boot which won’t be encrypted and an LVM volume that will be fully encrypted and hold everything else.
+
     /dev/sda1 > 83 (Linux) for /boot
     /dev/sda2 > 8e (LVM) for lvm
 
