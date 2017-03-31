@@ -6,4 +6,3 @@
     - cups-browsed.service
     - docker
     - org.cups.cupsd.service
-    - sddm

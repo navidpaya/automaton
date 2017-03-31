@@ -34,9 +34,6 @@
   include: vim.yml
   tags:
     - vim
-  become: yes
-  become_user: navid
-  become_method: sudo
 
 - name: Configure ssh
   include: ssh.yml
@@ -46,26 +43,10 @@
   become_user: navid
   become_method: sudo
 
-- name: Install packer
-  include: packer.yml
-  tags:
-    - packer
-  become: yes
-  become_user: navid
-  become_method: sudo
-
 - name: Install aur packages
   include: aur.yml
   tags:
     - aur
-  become: yes
-  become_user: navid
-  become_method: sudo
-
-- name: Configure i3 et al
-  include: i3.yml
-  tags:
-    - i3
   become: yes
   become_user: navid
   become_method: sudo

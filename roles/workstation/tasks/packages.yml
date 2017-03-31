@@ -1,35 +1,21 @@
 ---
-- name: Uninstall vi because it sucks
-  pacman: name={{ item }} state=absent
-  with_items:
-    - vi
-
 - name: All the packages in one go
   pacman: name={{ item }} state=present
   with_items:
+    - aws-cli
     - bash-completion
     - bind-tools
-    - chromium
     - cowsay
     - cups
-    - dmenu
     - docker
     - docker-compose
     - dosfstools
-    - eog
-    - eog-plugins
-    - evince
-    - feh
-    - fortune-mod
-    - ghostscript
     - gimp
     - git
     - gsfonts
     - gvim
     - htop
-    - i3
     - iftop
-    - intellij-idea-community-edition
     - iotop
     - ipython
     - ipython2
@@ -39,7 +25,6 @@
     - linux-headers
     - mtools
     - mtr
-    - nautilus
     - net-tools # For Virtualbox networking
     - networkmanager
     - nmap
@@ -47,17 +32,13 @@
     - openssh
     - openvpn
     - parcellite
-    - pcmanfm
-    - ponymix
-    - pulseaudio
     - python-virtualenv
+    - python2-pip
     - python2-virtualenv
+    - python-pip
     - rsync
-    - rxvt-unicode
-    - scrot
-    - sddm
+    - smartmontools
     - sshpass
-    - sushi
     - sysdig
     - tcpdump
     - the_silver_searcher
@@ -71,8 +52,4 @@
     - vlc
     - whois
     - wireshark-gtk
-    - xf86-input-synaptics
-    - xf86-video-intel
-    - xorg-server
-    - xorg-xbacklight
     - xsane
