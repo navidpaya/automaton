@@ -2,6 +2,7 @@
 - name: Install all AUR packages
   packer: name={{ item }}
   with_items:
+    - google-chrome
     - insync
     - insync-nautilus
     - spotify

@@ -1,0 +1,12 @@
+aligner
+aligner-python
+autocomplete-python
+dash
+hyperclick
+python-autopep8
+python-debugger
+python-isort
+python-tools
+python-yapf
+script
+vim-mode-plus

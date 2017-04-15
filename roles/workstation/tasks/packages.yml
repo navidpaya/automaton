@@ -2,6 +2,11 @@
 - name: All the packages in one go
   pacman: name={{ item }} state=present
   with_items:
+    - android-tools
+    - android-udev
+    - apm
+    - atom
+    - autopep8
     - aws-cli
     - bash-completion
     - bind-tools
@@ -10,6 +15,7 @@
     - docker
     - docker-compose
     - dosfstools
+    - fzf
     - gimp
     - git
     - gsfonts
@@ -22,26 +28,35 @@
     - jdk8-openjdk
     - keepassx2
     - libreoffice-still
+    - libu2f-host
     - linux-headers
     - mtools
     - mtr
     - net-tools # For Virtualbox networking
     - networkmanager
+    - networkmanager-openvpn
     - nmap
     - ntfs-3g
     - openssh
     - openvpn
     - parcellite
+    - python-isort
+    - python-jedi
+    - python-pip
     - python-virtualenv
+    - python2-autopep8
+    - python2-isort
+    - python2-jedi
     - python2-pip
     - python2-virtualenv
-    - python-pip
+    - python2-yapf
     - rsync
     - smartmontools
     - sshpass
     - sysdig
     - tcpdump
     - the_silver_searcher
+    - tmux
     - transmission-gtk
     - ttf-dejavu
     - ttf-liberation
@@ -53,3 +68,5 @@
     - whois
     - wireshark-gtk
     - xsane
+    - yapf
+    - zeal
