@@ -4,9 +4,6 @@
   with_items:
     - android-tools
     - android-udev
-    - apm
-    - atom
-    - autopep8
     - aws-cli
     - bash-completion
     - bind-tools

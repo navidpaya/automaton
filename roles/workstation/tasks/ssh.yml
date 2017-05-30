@@ -1,3 +1,6 @@
 ---
 - name: Use a ~/.ssh/config file
-  file: src={{ dotfiles}}/ssh_config dest=~/.ssh/config state=link force=yes
+  file: src={{ dotfiles}}/ssh_config
+        dest=~/.ssh/config
+        state=link
+        force=yes

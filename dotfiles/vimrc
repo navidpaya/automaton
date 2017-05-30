@@ -5,37 +5,20 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 
 call plug#begin('~/.vim/plugged')
 Plug 'Lokaltog/vim-easymotion'
-Plug 'Shougo/neocomplcache.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
-Plug 'chase/vim-ansible-yaml'
-Plug 'fatih/vim-go'
-Plug 'gmarik/Vundle.vim'
 Plug 'kien/ctrlp.vim'
+Plug 'pearofducks/ansible-vim'
+Plug 'python-mode/python-mode'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'sjl/gundo.vim'
 Plug 'tmhedberg/SimpylFold'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-perl/vim-perl'
-Plug 'vim-ruby/vim-ruby'
 call plug#end()
-
-" Syntasic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" Make neocomplcache play nicer
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-let g:neocomplcache_enable_at_startup = 1
 
 " Make Python syntax completion awesome
 let python_highlight_all = 1
@@ -64,7 +47,6 @@ colorscheme solarized
 
 " Tabs are evil
 set expandtab
-set tabstop=4 shiftwidth=4 softtabstop=4
 set autoindent
 set wildmenu
 
@@ -95,9 +77,6 @@ nnoremap <Leader>n :call NumberToggle() <CR>
 " No more committing swp files to git
 set backupdir=/tmp
 set directory=/tmp
-
-" Save and run
-map <leader>r :w<CR>: !clear && ./%<CR>
 
 " Save ,quit, or not
 map <leader>w :wa<CR>
