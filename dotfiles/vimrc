@@ -5,10 +5,15 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 
 call plug#begin('~/.vim/plugged')
 Plug 'Lokaltog/vim-easymotion'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
+Plug 'Shougo/neocomplete.vim'
+Plug 'SirVer/ultisnips'
+Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
+Plug 'fatih/vim-go'
+Plug 'jiangmiao/auto-pairs'
 Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
 Plug 'pearofducks/ansible-vim'
 Plug 'python-mode/python-mode'
 Plug 'rking/ag.vim'
@@ -16,9 +21,12 @@ Plug 'scrooloose/nerdtree'
 Plug 'sjl/gundo.vim'
 Plug 'tmhedberg/SimpylFold'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
+Plug 'yegappan/mru'
 call plug#end()
+
+" The magic of most recently used files
+map <leader>f :MRU<CR>
 
 " Make Python syntax completion awesome
 let python_highlight_all = 1
