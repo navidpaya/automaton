@@ -25,6 +25,16 @@ Plug 'tpope/vim-fugitive'
 Plug 'yegappan/mru'
 call plug#end()
 
+" For neocomplete
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
 " The magic of most recently used files
 map <leader>f :MRU<CR>
 
