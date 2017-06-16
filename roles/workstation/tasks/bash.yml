@@ -4,4 +4,3 @@
   with_items:
     - { src: 'bash_profile', dest: '.bash_profile' }
     - { src: 'bashrc', dest: '.bashrc' }
-    - { src: 'inputrc', dest: '.inputrc' }
