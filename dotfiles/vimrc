@@ -36,6 +36,10 @@ map <leader>f :MRU<CR>
 " Make Python syntax completion awesome
 let python_highlight_all = 1
 
+" Close documentaion window once autocomplete is done
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 " What would I do witout nerdtree?
 map <C-n> :NERDTreeToggle <CR>
 
