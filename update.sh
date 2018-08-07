@@ -1,2 +1,2 @@
 #!/bin/bash
-time sudo ansible-playbook workstation.yml
+time sudo ansible-playbook -i hosts.ini workstation.yml

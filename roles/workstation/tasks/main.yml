@@ -1,57 +1,39 @@
 ---
 - name: Install all packages
-  include: packages.yml
-  tags:
-    - packages
+  include_tasks: packages.yml
 
 - name: Manage all services
-  include: services.yml
-  tags:
-    - services
+  include_tasks: services.yml
 
 - name: Manage all users
-  include: users.yml
-  tags:
-    - users
+  include_tasks: users.yml
 
 - name: Configure git
-  include: git.yml
-  tags:
-    - git
+  include_tasks: git.yml
   become: yes
   become_user: navid
   become_method: sudo
 
 - name: Configure bash
-  include: bash.yml
-  tags:
-    - bash
+  include_tasks: bash.yml
   become: yes
   become_user: navid
   become_method: sudo
 
 - name: Configure vim
-  include: vim.yml
-  tags:
-    - vim
+  include_tasks: vim.yml
 
 - name: Configure ssh
-  include: ssh.yml
-  tags:
-    - ssh
+  include_tasks: ssh.yml
   become: yes
   become_user: navid
   become_method: sudo
 
 - name: Install aur packages
-  include: aur.yml
-  tags:
-    - aur
+  include_tasks: aur.yml
   become: yes
   become_user: navid
   become_method: sudo
 
 - name: Install kernel modules for Virtualbox
-  include: virtualbox.yml
-  tags:
-    - virtualbox
+  include_tasks: virtualbox.yml

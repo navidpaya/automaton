@@ -1,6 +1,6 @@
 ---
 - name: Install all AUR packages
-  packer: name={{ item }}
+  aur: name={{ item }} user={{ user }}
   with_items:
     - google-chrome
     - insync

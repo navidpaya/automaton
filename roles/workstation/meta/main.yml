@@ -1,2 +1,0 @@
-dependencies:
-  - { role: 'coxley.packer', when: ansible_os_family == 'Archlinux' }

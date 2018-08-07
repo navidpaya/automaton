@@ -12,6 +12,7 @@
     - cups
     - docker
     - docker-compose
+    - docker-machine
     - dosfstools
     - fzf
     - gimp
@@ -24,7 +25,7 @@
     - iotop
     - ipython
     - ipython2
-    - jdk8-openjdk
+    - jdk9-openjdk
     - keepassx2
     - libreoffice-still
     - libu2f-host
