@@ -10,30 +10,38 @@
 
 - name: Configure git
   include_tasks: git.yml
-  become: yes
-  become_user: navid
-  become_method: sudo
+  args:
+    apply:
+      become: yes
+      become_user: navid
+      become_method: sudo
 
 - name: Configure bash
   include_tasks: bash.yml
-  become: yes
-  become_user: navid
-  become_method: sudo
+  args:
+    apply:
+      become: yes
+      become_user: navid
+      become_method: sudo
 
 - name: Configure vim
   include_tasks: vim.yml
 
 - name: Configure ssh
   include_tasks: ssh.yml
-  become: yes
-  become_user: navid
-  become_method: sudo
+  args:
+    apply:
+      become: yes
+      become_user: navid
+      become_method: sudo
 
 - name: Install aur packages
   include_tasks: aur.yml
-  become: yes
-  become_user: navid
-  become_method: sudo
+  args:
+    apply:
+      become: yes
+      become_user: navid
+      become_method: sudo
 
 - name: Install kernel modules for Virtualbox
   include_tasks: virtualbox.yml
