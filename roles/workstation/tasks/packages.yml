@@ -1,72 +1,36 @@
 ---
 - name: All the packages in one go
-  pacman: name={{ item }} state=present
-  with_items:
-    - android-tools
-    - android-udev
-    - aws-cli
-    - bash-completion
-    - bind-tools
-    - cowsay
-    - ctags
-    - cups
-    - docker
-    - docker-compose
-    - docker-machine
-    - dosfstools
-    - fzf
-    - gimp
-    - git
-    - go
-    - gsfonts
-    - gvim
-    - htop
-    - iftop
-    - iotop
-    - ipython
-    - ipython2
-    - jdk9-openjdk
-    - keepassx2
-    - libreoffice-still
-    - libu2f-host
-    - linux-headers
-    - mtools
-    - mtr
-    - net-tools # For Virtualbox networking
-    - networkmanager
-    - networkmanager-openvpn
-    - nmap
-    - ntfs-3g
-    - openssh
-    - openvpn
-    - parcellite
-    - python-isort
-    - python-jedi
-    - python-pip
-    - python-virtualenv
-    - python2-autopep8
-    - python2-isort
-    - python2-jedi
-    - python2-pip
-    - python2-virtualenv
-    - python2-yapf
-    - rsync
-    - smartmontools
-    - sshpass
-    - sysdig
-    - tcpdump
-    - the_silver_searcher
-    - tmux
-    - transmission-gtk
-    - ttf-dejavu
-    - ttf-liberation
-    - unzip
-    - vagrant
-    - virtualbox
-    - virtualbox-host-dkms
-    - vlc
-    - whois
-    - wireshark-gtk
-    - xsane
-    - yapf
-    - zeal
+  apt:
+    name:
+      [
+        "awscli",
+        "bash-completion",
+        "cowsay",
+        "dosfstools",
+        "fzf",
+        "gimp",
+        "git",
+        "gsfonts",
+        "vim",
+        "htop",
+        "iftop",
+        "iotop",
+        "mtools",
+        "mtr",
+        "nmap",
+        "openvpn",
+        "rsync",
+        "tcpdump",
+        "silversearcher-ag",
+        "tmux",
+        "transmission-gtk",
+        "unzip",
+        "vagrant",
+        "virtualbox",
+        "virtualbox-dkms",
+        "vlc",
+        "whois",
+        "wireshark-gtk",
+        "xsane",
+      ]
+    state: present

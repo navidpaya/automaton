@@ -1,8 +1,0 @@
----
-- name: All the services in one go
-  service: name={{ item}} state=started enabled=yes
-  with_items:
-    - NetworkManager
-    - cups-browsed.service
-    - docker
-    - org.cups.cupsd.service

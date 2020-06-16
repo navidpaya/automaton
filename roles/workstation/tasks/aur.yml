@@ -1,8 +1,0 @@
----
-- name: Install all AUR packages
-  aur: name={{ item }} user={{ user }}
-  with_items:
-    - google-chrome
-    - insync
-    - insync-nautilus
-    - spotify
