@@ -2,6 +2,8 @@ export SHELL=/bin/bash
 export TERM='xterm'
 export EDITOR=vim
 
+source /etc/bash_completion.d/git-prompt
+source /usr/share/bash-completion/completions/git
 source /usr/share/doc/fzf/examples/key-bindings.bash
 source /usr/share/doc/fzf/examples/completion.bash
 
@@ -19,7 +21,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-export PS1='\[\e[0;32m\]\u\[\e[m\]@\[\e[0;32m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\]\[\e[0;34m\]$(parse_git_branch)\[\e[m\] '
+export PS1='\[\e[0;32m\]\u\[\e[m\]@\[\e[0;32m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\]\[\e[0;34m\]$(__git_ps1)\[\e[m\] '
 
 # Git Aliases
 alias gs='git status'
