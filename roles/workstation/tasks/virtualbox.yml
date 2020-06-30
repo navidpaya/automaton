@@ -5,7 +5,3 @@
     - vboxdrv
     - vboxnetadp
     - vboxnetflt
-
-- name: Load the Virtualbox kernel modules at boot
-  copy: src=virtualbox.conf
-        dest=/etc/modprobe.d/virtualbox.conf
