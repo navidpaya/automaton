@@ -1,4 +1,4 @@
-user:      navid
+user:      'navid'
 git_name:  'Navid Paya'
 git_email: 'me@navidpaya.com'
 dotfiles:  '~/.automaton/dotfiles'

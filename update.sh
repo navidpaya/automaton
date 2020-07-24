@@ -1,2 +1,2 @@
 #!/bin/bash
-time sudo ansible-playbook -i hosts.ini workstation.yml
+time ansible-playbook --ask-become-pass -i hosts.ini workstation.yml

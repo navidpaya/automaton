@@ -1,33 +1,26 @@
 ---
 - name: Install all packages
   include_tasks: packages.yml
+  args:
+    apply:
+      become: yes
+      become_method: sudo
 
 - name: Configure git
   include_tasks: git.yml
-  args:
-    apply:
-      become: yes
-      become_user: navid
-      become_method: sudo
 
 - name: Configure bash
   include_tasks: bash.yml
-  args:
-    apply:
-      become: yes
-      become_user: navid
-      become_method: sudo
 
 - name: Configure vim
   include_tasks: vim.yml
 
 - name: Configure ssh
   include_tasks: ssh.yml
-  args:
-    apply:
-      become: yes
-      become_user: navid
-      become_method: sudo
 
 - name: Install kernel modules for Virtualbox
   include_tasks: virtualbox.yml
+  args:
+    apply:
+      become: yes
+      become_method: sudo

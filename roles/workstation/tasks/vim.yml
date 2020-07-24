@@ -1,29 +1,23 @@
 ---
 - name: Symlink vi to vim
-  file: src=/usr/bin/vim dest=/usr/bin/vi state=link
+  file: src=/usr/bin/vim
+        dest=/usr/bin/vi
+        state=link
+  become: yes
+  become_method: sudo
 
 - name: Symlink few configuration files from the repo
-  file: src={{ dotfiles }}/{{ item.src }} dest=~/{{ item.dest }} state=link force=yes
+  file: src={{ dotfiles }}/{{ item.src }}
+        dest=~/{{ item.dest }}
+        state=link
+        force=yes
   with_items:
     - { src: 'vimrc', dest: '.vimrc' }
-  become: yes
-  become_user: navid
-  become_method: sudo
 
 - name: Create ~/.vim/autoload
-  file: path=~/.vim/autoload state=directory
-  become: yes
-  become_user: navid
-  become_method: sudo
+  file: path=~/.vim/autoload
+        state=directory
 
 - name: Install vim-plug
   get_url: url='https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
            dest=~/.vim/autoload/plug.vim
-  become: yes
-  become_user: navid
-  become_method: sudo
-
-# - name: Install vim plugins
-#   shell: 'vim +PluginInstall +qall'
-#   sudo: yes
-#   sudo_user: navid
