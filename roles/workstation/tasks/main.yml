@@ -9,8 +9,8 @@
 - name: Configure git
   include_tasks: git.yml
 
-- name: Configure bash
-  include_tasks: bash.yml
+- name: Configure zsh
+  include_tasks: zsh.yml
 
 - name: Configure vim
   include_tasks: vim.yml

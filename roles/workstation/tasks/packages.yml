@@ -4,7 +4,6 @@
     name:
       [
         "awscli",
-        "bash-completion",
         "cowsay",
         "dosfstools",
         "fzf",
@@ -32,5 +31,6 @@
         "whois",
         "wireshark-gtk",
         "xsane",
+        "zsh",
       ]
     state: present

@@ -17,23 +17,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.cache.scope = :box
   end
 
-  # Vagrant.configure("2") do |config|
-  #   config.vm.provision "ansible" do |ansible|
-  #     ansible.playbook = "playbook.yml"
-  #   end
-  # end
-
-  # Vagrant.configure("2") do |config|
-  #   config.omnibus.chef_version = :latest
-  # end
-
-  # Vagrant.configure("2") do |config|
-  #   config.vm.provision "chef_solo" do |chef|
-  #     chef.cookbooks_path = "my_cookbooks"
-  #     chef.add_recipe "apache"
-  #     chef.roles_path = "my_roles
-  #     chef.add_role("web")
-  #   end
-  # end
+  Vagrant.configure("2") do |config|
+    config.vm.provision "ansible" do |ansible|
+      ansible.playbook = "playbook.yml"
+    end
+  end
 
 end

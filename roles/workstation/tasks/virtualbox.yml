@@ -1,7 +1,0 @@
----
-- name: Load the Virtualbox kernel modules
-  modprobe: name={{ item }}
-  with_items:
-    - vboxdrv
-    - vboxnetadp
-    - vboxnetflt
