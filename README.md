@@ -12,39 +12,47 @@ Use cfdisk or fdisk. We’ll create a /boot which won’t be encrypted and an LV
 ### Set up the LVM volumes
     cryptsetup open --type luks /dev/sda2 lvm
     pvcreate /dev/mapper/lvm
-    vgcreate MyStorage /dev/mapper/lvm
-    lvcreate -L 4G MyStorage -n swap_vol
-    lvcreate -l +100%FREE MyStorage -n root_vol
+    vgcreate storage /dev/mapper/lvm
+    lvcreate -L 4G storage -n swap-vol
+    lvcreate -l +100%FREE storage -n root-vol
 
 ### Format and mount the partitions
-    mkfs.ext4 /dev/mapper/MyStorage-root_vol
-    mount /dev/MyStorage/root_vol /mnt
+    mkfs.ext4 /dev/mapper/storage-root-vol
+    mount /dev/storage/root-vol /mnt
     mkfs.ext4 /dev/sda1
     mkdir /mnt/boot
     mount /dev/sda1 /mnt/boot
-    mkswap /dev/mapper/MyStorage-swap_vol
-    swapon /dev/MyStorage/swap_vol
+    mkswap /dev/mapper/storage-swap-vol
+    swapon /dev/storage/swap-vol
 
 ### Connect to the internet
-    wifi-menu
+    iwctl
+    device list
+    station device scan
+    station device get-networks
+    station device connect SSID
+    
+### Update the time using NTP
+    timedatectl set-ntp true
 
 ### Choose your pacman mirror
     vi /etc/pacman/mirrorlist
 
 ### Install the base
-    pacstrap /mnt base base-devel
+    pacstrap /mnt base linux linux-firmware
 
 ### Generate fstab
-    genfstab -p /mnt >> /mnt/etc/fstab
+    genfstab -U /mnt >> /mnt/etc/fstab
 
 ### Chroot to the new environment
     arch-chroot /mnt
 
 ### Set the hostname
-    echo "sunshine" > /etc/hostname
+    echo "harmony" > /etc/hostname
 
-### Adjust the timezone
+### Adjust the timezone and sync the hardware clock
     ln -sf /usr/share/zoneinfo/Australia/Sydney /etc/localtime
+    hwclock --systohc
 
 ### Set the locales
     vi /etc/locale.gen
@@ -60,14 +68,17 @@ Use cfdisk or fdisk. We’ll create a /boot which won’t be encrypted and an LV
     encrypt lvm2
 
 ### Compile the kernel
-    mkinitcpio -p linux
+    mkinitcpio -P
 
 ### Change root password
     passwd
 
+### Install Microcode
+    pacman -S amd-ucode
+
 ### Install and configure grub
     vi /etc/default/grub
-    GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda2:MyStorage root=/dev/mapper/MyStorage-root_vol"
+    GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda2:storage root=/dev/mapper/storage-root_vol"
     grub-install --target=i386-pc --recheck --debug /dev/sda
     grub-mkconfig -o /boot/grub/grub.cfg
 
