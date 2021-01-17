@@ -1,11 +1,11 @@
 ---
-- name: Install all packages
-  include_tasks: packages.yml
-  args:
-    apply:
-      become: yes
-      become_method: sudo
-
+# - name: Install all packages
+#   include_tasks: packages.yml
+#   args:
+#     apply:
+#       become: yes
+#       become_method: sudo
+ 
 - name: Configure git
   include_tasks: git.yml
 
@@ -17,10 +17,3 @@
 
 - name: Configure ssh
   include_tasks: ssh.yml
-
-- name: Install kernel modules for Virtualbox
-  include_tasks: virtualbox.yml
-  args:
-    apply:
-      become: yes
-      become_method: sudo

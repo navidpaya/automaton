@@ -1,3 +1,7 @@
 Host osmc
     Hostname 192.168.0.100
     User osmc
+
+Host plex
+    Hostname 192.168.4.49
+    User pi

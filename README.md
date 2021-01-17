@@ -1,1 +1,1 @@
-This is how I manage my Lenovo T430s with Ubuntu on it. I do a base installation and let Ansible take care of the the rest.
+This is how I manage my Lenovo T14 AMD with Fedora on it. I do a base installation and let Ansible take care of the the rest.

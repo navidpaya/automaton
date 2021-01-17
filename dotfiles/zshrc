@@ -28,7 +28,7 @@ alias gco='git checkout'
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -lh --color=auto'
 
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/fzf/shell/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 
 # Use modern completion system

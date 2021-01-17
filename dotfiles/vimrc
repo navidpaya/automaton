@@ -5,16 +5,13 @@ set rtp+=~/.vim/bundle/Vundle.vim/
 
 call plug#begin('~/.vim/plugged')
 Plug 'Lokaltog/vim-easymotion'
-Plug 'Shougo/neocomplete.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'pearofducks/ansible-vim'
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'sjl/gundo.vim'
@@ -24,25 +21,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'yegappan/mru'
 call plug#end()
 
-
-" Python-mode
-let g:pymode_python = 'python3'
-
-" neocomplete
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_auto_select = 1
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
 " The magic of most recently used files
 map <leader>f :MRU<CR>
 
 " Make Python syntax completion awesome
 let python_highlight_all = 1
-
-" Close documentaion window once autocomplete is done
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " What would I do witout nerdtree?
 map <C-n> :NERDTreeToggle <CR>
